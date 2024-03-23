@@ -1,0 +1,86 @@
+Create Categories:
+http://localhost:8080/api/categories/
+{
+   "categoryName": "Recyclables",
+   "wasteType": "Plastic",
+   "subWasteType": "#2 HDPE Natual"
+}
+
+View Categories:
+http://localhost:8080/api/categories/
+
+-----------------------------------------------------------------
+
+Create Role:
+http://localhost:8080/api/role/
+{
+   "roleName": "Staff"
+}
+
+----------------------------------------------------------------------
+
+Create Users:
+http://localhost:8080/api/users/
+{
+   "username": "Test Staff 1",
+   "password": "staff@123",
+   "role": {
+    "roleId": 2,
+    "roleName": "Staff"
+  }
+}
+
+--------------------------------------------------------------------------
+
+Create Buyers:
+http://localhost:8080/api/buyers/
+{
+   "buyerName": "Test Buyer 2"
+}
+
+--------------------------------------------------------------------------
+
+Create Waste Entries:
+http://localhost:8080/api/waste-entries/
+{
+   "date": "2024-02-01",
+   "weightInPounds": 10.00,
+   "landfillFee": null,
+   "buyerRevenue": 5.00,
+   "category": {
+    "categoryId": 13
+  },
+  "buyer": {
+    "buyerId": 2
+  }
+}
+
+--------------------------------------------------------------------------
+
+Get Summary Report for a financial year(Summary Table)
+http://localhost:8080/api/summary-report/financial-year
+
+--------------------------------------------------------------------------
+
+Get Recyclable Weights with Dates Filter:
+http://localhost:8080/api/summary-report/recyclable-weight?startDate=2023-12-01&endDate=2024-07-01
+
+--------------------------------------------------------------------------
+
+Get Recyclable Revenue with Dates Filter:
+http://localhost:8080/api/summary-report/recyclable-revenue?startDate=2023-12-01&endDate=2024-07-01
+
+--------------------------------------------------------------------------
+
+Get Recyclable Waste Weight with Dates Filter:
+http://localhost:8080/api/summary-report/waste-weight?startDate=2023-12-01&endDate=2024-07-01
+
+--------------------------------------------------------------------------
+
+Get Recyclable Waste Weight and Revenue Month wise:
+http://localhost:8080/api/summary-report/recyclable-sumamry
+
+--------------------------------------------------------------------------
+
+Get All Waste Weight Month wise:
+http://localhost:8080/api/summary-report/waste-sumamry
